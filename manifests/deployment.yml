@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: habibmatmirrorarktest 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: habibmatmirrorarktest 
+    spec:
+      containers:
+        - name: habibmatmirrorarktest 
+          image: containerpocelis.azurecr.io/habibmatmirrorarktest
+          ports:
+          - containerPort: 80
